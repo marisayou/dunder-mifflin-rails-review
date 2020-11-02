@@ -1,24 +1,2 @@
 <h1>Update Employee Information</h1>
-<%= form_for @employee do |f| %>
-    <% if @employee.errors.any? %>
-        <% @employee.errors.full_messages.each do |msg| %>
-            <%= msg %>
-            <br>
-        <% end %>
-    <% end %>
-    <br>
-    <%= f.label :first_name %>
-    <%= f.text_field :first_name %>
-    <%= f.label :last_name %>
-    <%= f.text_field :last_name %>
-    <%= f.label :alias %>
-    <%= f.text_field :alias %>
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-    <%= f.label :office %>
-    <%= f.text_field :office %>
-    <%= f.label :dog %>
-    <%= f.collection_select :dog_id, Dog.all, :id, :name %>
-    <br>
-    <%= f.submit %>
-<% end %>
+<%= render "form" %>
